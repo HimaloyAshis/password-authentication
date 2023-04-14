@@ -11,6 +11,7 @@ import Main from './components/Layout/Main';
 import Home from './components/Home/Home';
 import LogIn from './components/Login/LogIn';
 import Register from './components/Register/Register';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {
