@@ -1,14 +1,33 @@
 import React from 'react';
 
 const Register = () => {
+
+
+    const allHandle = (event) => {
+        event.preventDefault()
+        console.log(event.target.password.value)
+    }
+
+    const handleChange = (event) => {
+
+        console.log(event.target.value)
+    }
+
+    const handleBlur = (event) => {
+
+        console.log(event.target.value)
+    }
+
+    
+
     return (
-        <div>
-            <input type="email" name="email" id="email" placeholder='your email'/>
+        <form onSubmit={allHandle}>
+            <input onChange={handleChange} type="email" name="email" id="email" placeholder='your email' />
             <br />
-            <input type="password" name="password" id="password" placeholder='password'/>
+            <input onBlur={handleBlur} type="password" name="password" id="password" placeholder='password' />
             <br />
             <input type="submit" value="Register" />
-        </div>
+        </form>
     );
 };
 
